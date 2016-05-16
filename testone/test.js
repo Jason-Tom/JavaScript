@@ -1,4 +1,4 @@
-// ¶¨ÒåÔÚ·½·¨ÍâÈÎºÎÎ»ÖÃ¶¼ĞĞ
+ï»¿// å®šä¹‰åœ¨æ–¹æ³•å¤–ä»»ä½•ä½ç½®éƒ½è¡Œ
 var host = 90;
 
 function myFunction() {
@@ -16,17 +16,17 @@ function changeImage() {
 
 function chance() {
     x = document.getElementById("change");
-    x.innerHTML = "Í¨¹ıinnerHTML¸Ä±ä±êÇ©ÏÔÊ¾µÄÄÚÈİ";
+    x.innerHTML = "é€šè¿‡innerHTMLæ”¹å˜æ ‡ç­¾æ˜¾ç¤ºçš„å†…å®¹fgsddg";
 }
 
 function chance2() {
     y = document.getElementById("change2");
-    y.innerHTML = "Í¨¹ıinnerHTML button±êÇ©ÏÔÊ¾µÄÄÚÈİ";
+    y.innerHTML = "é€šè¿‡innerHTML buttonæ ‡ç­¾æ˜¾ç¤ºçš„å†…å®¹";
 }
 
 function chance3() {
     y = document.getElementById("change3");
-    y.innerHTML = "Í¨¹ıinnerHTML ¸Ä±älabel±êÇ©ÏÔÊ¾µÄÄÚÈİ";
+    y.innerHTML = "é€šè¿‡innerHTML æ”¹å˜labelæ ‡ç­¾æ˜¾ç¤ºçš„å†…å®¹";
 }
 
 function chance4() {
@@ -37,12 +37,12 @@ function chance4() {
 function chance5() {
     y = document.getElementById("change5").value;
     if (y == "" || isNaN(y)) {
-        alert("ÇëÊäÈëÊı×Ö");
+        alert("è¯·è¾“å…¥æ•°å­—");
     }
 }
 
 function rewrite() {
-    document.write("<h1>¸²¸Ç²âÊÔ\
+    document.write("<h1>è¦†ç›–æµ‹è¯•\
         </h1>");
 }
 
@@ -50,7 +50,7 @@ function chance6() {
     var x = 8,
         y = "sf",
         z = 'asdf';
-    // Êä³öÒªÓĞÏàÓ¦µÄÊä³ö¸ñÊ½
+    // è¾“å‡ºè¦æœ‰ç›¸åº”çš„è¾“å‡ºæ ¼å¼
     document.write(x + y + z);
 }
 
@@ -84,21 +84,21 @@ function chance8() {
         two: 7899
     }
     var x = document.getElementById("8");
-    // innerHTMLÄÜÊä³ö×Ö·û´®ºÍ±äÁ¿£¬×Ö·û´®ÊÇhtmlÔÚhtmlÎÄ¼şÉÏÄÜ¼ÌĞøÔËĞĞ
+    // innerHTMLèƒ½è¾“å‡ºå­—ç¬¦ä¸²å’Œå˜é‡ï¼Œå­—ç¬¦ä¸²æ˜¯htmlåœ¨htmlæ–‡ä»¶ä¸Šèƒ½ç»§ç»­è¿è¡Œ
     x.innerHTML = tiger.one + " " + tiger["two"];
 }
 
 function chance9() {
     var test = 'asfasd';
-    // ¶ÔÏóÒ»¶¨ÒªÊµÏÖ¶¨Òå
+    // å¯¹è±¡ä¸€å®šè¦å®ç°å®šä¹‰
     var lalala = new Object();
     lalala.name = "2013";
     lalala.tall = "176cm";
     lalala.weight = "64kg";
-    document.getElementById("9").innerHTML = "testµÄ³¤¶ÈÊÇ£º" + test.length + "<br>" + lalala.name + " " + lalala.tall + " " + lalala.weight;
+    document.getElementById("9").innerHTML = "testçš„é•¿åº¦æ˜¯ï¼š" + test.length + "<br>" + lalala.name + " " + lalala.tall + " " + lalala.weight;
     // document.getElementById("9").innerHTML = lalala.name + " " + lalala.tall + " " + lalala.weight;
 }
-// ÓĞ²ÎÊıµÄ±äÁ¿£¬²»ÓÃ¶¨ÒåÀàĞÍ£¨varÒ²²»ÄÜ·Å£¬»á±»µ±×÷±äÁ¿£©£¬Ö±½Ó·ÅÈë¾ÍÊÇµ÷ÓÃ
+// æœ‰å‚æ•°çš„å˜é‡ï¼Œä¸ç”¨å®šä¹‰ç±»å‹ï¼ˆvarä¹Ÿä¸èƒ½æ”¾ï¼Œä¼šè¢«å½“ä½œå˜é‡ï¼‰ï¼Œç›´æ¥æ”¾å…¥å°±æ˜¯è°ƒç”¨
 function chance10(name, tall) {
     document.getElementById("10").innerHTML = "his name is:" + name + "tall:" + tall;
 }
@@ -106,19 +106,19 @@ function chance10(name, tall) {
 function chance11(name, tall) {
     document.getElementById("11").innerHTML = compute('lalala', 176);
 }
-// º¯Êı¶¨Òå¿ÉÒÔÄÚÇ¶
+// å‡½æ•°å®šä¹‰å¯ä»¥å†…åµŒ
 function compute(name, tall) {
     return name + " " + tall;
 }
 
 function chance12() {
-    // ¸²¸ÇÈ«¾Ö±äÁ¿
+    // è¦†ç›–å…¨å±€å˜é‡
     // var host = 80;
-    document.getElementById("12").innerHTML = "È«¾Ö±äÁ¿:" + host;
+    document.getElementById("12").innerHTML = "å…¨å±€å˜é‡:" + host;
 }
 
 function chance13(a, b) {
-    // ÔËËãÊ±Êı¾İÀàĞÍ×Ô¶¯×ª»»
+    // è¿ç®—æ—¶æ•°æ®ç±»å‹è‡ªåŠ¨è½¬æ¢
     var c = "lalala";
     var d = "hahaha";
     document.getElementById("13").innerHTML = "a+b=" + (a + b) + "<br>" +
@@ -138,7 +138,7 @@ function chance14(a, b) {
 }
 
 function chance15(b) {
-    // ¹æ·¶»¯£¬±äÁ¿Ê¹ÓÃÇ°Òª¶¨Òå
+    // è§„èŒƒåŒ–ï¼Œå˜é‡ä½¿ç”¨å‰è¦å®šä¹‰
     var x = new Date().getDay();
     var y;
     switch (b) {
@@ -168,7 +168,7 @@ function chance15(b) {
         case 6:
             y = "Taday is Sturday";
             break;
-            // Ò»ÖÜµÄ¿ªÊ¼ÊÇÖÜÈÕ
+            // ä¸€å‘¨çš„å¼€å§‹æ˜¯å‘¨æ—¥
         case 0:
             y = "Taday is Sunday";
             break;
@@ -179,11 +179,78 @@ function chance15(b) {
 }
 
 function chance16() {
-    var _object = { name: "tom", tall: 176, age: 23 },
-    // ¶¨Òå±äÁ¿¾¡Á¿¶ÔÓ¦ºÅ±äÁ¿ÀàĞÍ
-        temp="";
-    for (x in _object) 
+    var _object = {
+            name: "tom",
+            tall: 176,
+            age: 23
+        },
+        // å®šä¹‰å˜é‡å°½é‡å¯¹åº”å·å˜é‡ç±»å‹
+        temp = "";
+    for (x in _object)
         temp += _object[x] + " ";
-    // Êä³öµÄÊı¾İÓĞ¶à¸ö£¬ÏÈÍ¨¹ıÒ»¸ö×Ö·û´®±äÁ¿´æ´¢ÔÙÒ»´ÎĞÔÊä³ö
+    // è¾“å‡ºçš„æ•°æ®æœ‰å¤šä¸ªï¼Œå…ˆé€šè¿‡ä¸€ä¸ªå­—ç¬¦ä¸²å˜é‡å­˜å‚¨å†ä¸€æ¬¡æ€§è¾“å‡º
     document.getElementById("16").innerHTML = temp;
+}
+
+function chance17() {
+    console.log("Hello superman");
+    document.getElementById("17").innerHTML = "temp";
+}
+
+function chance18() {
+    var test = new Array,
+        i = 0;
+    for (i = 1; i <= 10; i++) {
+        test[i] = i;
+        if (i == 5)
+            break;
+        console.log("è¾“å‡ºæ•°æ®ï¼š" + test[i]);
+    }
+    for (i = 1; i <= 10; i++) {
+        test[i] = i;
+        if (i == 5)
+            continue;
+        console.log("è¾“å‡ºæ•°æ®ï¼š" + test[i]);
+    }
+    document.getElementById("18").innerHTML = "temp";
+}
+
+function chance19() {
+    var test = new Array,
+        i = 0;
+    tiao: {
+        console.log('1');
+        console.log('2');
+        break tiao;
+        console.log('3');
+    }
+    console.log("\n");
+    test: for (; i <= 3; i++) {
+        if (i == 2) {
+            continue test;
+        }
+        console.log(i);
+    }
+    document.getElementById("19").innerHTML = "å¼å¼çš„break";
+}
+
+function chance20() {
+    document.getElementById("19").innerHTML = "å¼å¼çš„å¼‚å¸¸æµ‹è¯•";
+    // throwçš„å¼‚å¸¸æ˜¯è‡ªå®šä¹‰çš„ï¼Œç¨‹åºåœ¨è¿è¡Œæ—¶æ˜¯æ²¡æœ‰é”™è¯¯çš„
+    try {
+        // è¿è¡Œé”™è¯¯ï¼Œæ— æ³•æ•è·ï¼Œèƒ½æ•è·å¼‚å¸¸ä¸€å®šæ˜¯æœ‰ä¸€å¥å¥å®Œæ•´çš„è¯­å¥
+        console.log('this a test!');
+        // tryæ•è·çš„æ˜¯è¯­æ³•é”™è¯¯
+        throw "æµ‹è¯•";
+        // throwæ•è·çš„æ˜¯è‡ªå®šä¹‰é”™è¯¯ï¼Œå‰ææ˜¯ç¨‹åºèƒ½è¿è¡Œçš„
+    } catch (e) {
+        // eå°±æ˜¯å‰é¢æŠ›å‡ºçš„å¼‚å¸¸å‚æ•°é›†åˆ
+        console.log('æç¤ºæ£€æµ‹: ' + e);
+    }
+}
+
+function chance21(conf){
+    if (test==null||test=="") {
+        alert("è¯·è¾“å…¥ç”¨æˆ·å");
+    }
 }
