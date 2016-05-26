@@ -1,0 +1,40 @@
+.one {
+    height: 200px;
+    width: 200px;
+    background-color: yellow;
+}
+
+.two {
+    height: 200px;
+    width: 200px;
+    background-color: green;
+}
+
+.three {
+    height: 200px;
+    width: 200px;
+    background-color: pink;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    height: 600px;
+    width: 900px;
+    background-color: #fffeb8;
+}
+
+.item:nth-child(1) {
+    align-self: flex-start;
+    background-color: green;
+}
+
+.item:nth-child(2) {
+    align-self: center;
+    background-color: blue;
+}
+
+.item:nth-child(3) {
+    align-self: flex-end;
+    background-color: yellow;
+}

@@ -1,0 +1,18 @@
+.box {
+    display: flex;
+    width: 100%; 
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: flex-end;
+    /*height: 600px;*/
+    background-color: yellow;
+}
+
+.item {
+    /*转换成内联元素，注意百分比，父级flex-wrap设定为不换行*/
+    width: 25.5%;
+    height: auto;
+    /*height: 300px ;*/
+    margin-left: 2px;
+    background-color: green;
+}

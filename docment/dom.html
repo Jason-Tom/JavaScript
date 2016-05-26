@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+
+<body>
+    <p id="id_test">id_test</p>
+    <p name="name_test_one">name_test_one</p>
+    <p name="name_test_two">name_test_two</p>
+    <p class="class_test_one">class_test_one</p>
+    <p class="class_test_two">class_test_two</p>
+    <div class="la">
+        <p>four</p>
+        <p>five</p>
+    </div>
+    <script type="text/javascript">
+    // 注意类名、id、标签不能打错
+    var x = document.getElementById("id_test");
+    x.innerHTML = "id_test lalala";
+    // 命令对应好，是标签名TagName
+    var y = document.getElementsByTagName("p");
+    // 类名指定，要先通过数组指定是那个对应的标签
+    y[3].innerHTML = "name_test_one lalala";
+    var z = document.getElementsByClassName("class_test_one");
+    z[0].innerHTML = "class_test_one lalala";
+    // 嵌套打法，指定某个范围，在复制给某个变量在进行定位
+    var a = document.getElementsByClassName('la');
+    var b = a[0].getElementsByTagName('p');
+    b[0].innerHTML = "lalala";
+    </script>
+</body>
+
+</html>

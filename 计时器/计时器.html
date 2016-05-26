@@ -1,0 +1,67 @@
+﻿<html>
+
+<head>
+    <script language=javascript>
+    var one, two, three;
+
+    function clock() {
+        var ms = new Date().getMilliseconds();
+        var s = new Date().getSeconds();
+        var min = new Date().getMinutes();
+        var end_time = 60.00;
+        var _ms = parseInt(ms / 10);
+        var _s = s;
+        var _min = min;
+        console.log(min);
+        var a, b, c;
+        if (_s - two >= 0) {
+            a = _s - two;
+        } else {
+            a = 60 + _s - two;
+        }
+        if (_ms - one >= 0) {
+            b = _ms - one;
+        } else {
+            b = 100 + _ms - one;
+        }
+        if (_min - three >= 0) {
+            c = _min - three;
+        } else {
+            c = 60 + _min - three;
+        }
+        //取整
+        document.getElementById("clock").value = c + " " + a + "." + b + "  时间(秒)" + " ";
+    }
+    // 停止
+    function _stop() {
+        clearInterval(int);
+    }
+    // 重新开始，重新调用该函数即可
+    function _start() {
+        var ms = new Date().getMilliseconds();
+        var s = new Date().getSeconds();
+        var min = new Date().getUTCMinutes();
+        // console.log(min);
+        one = parseInt(ms / 10);
+        two = s;
+        three = min;
+        // console.log(test.substring(0,2));
+        // console.log(parseInt(7/2) );
+        int = setInterval(" clock() ", 10);
+    }
+    </script>
+</head>
+
+<body>
+    <!-- <form> -->
+    <center>
+        <!-- <input type="text" id="clock" size="100" /> -->
+        <input type="text" id="clock" size="100" />
+        <button onclick="_stop()">stop</button>
+        <button onclick="_start()">start</button>
+        <!-- <button onclick="_start()">reset</button> -->
+    </center>
+    <!-- </form> -->
+</body>
+
+</html>

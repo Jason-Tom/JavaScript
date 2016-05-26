@@ -1,0 +1,29 @@
+.one {
+    height: 200px;
+    width: 200px;
+    background-color: yellow;
+}
+
+.two {
+    height: 200px;
+    width: 200px;
+    background-color: green;
+}
+
+.three {
+    height: 200px;
+    width: 200px;
+    background-color: pink;
+}
+
+.box {
+    width: 900px;
+    height: 600px;
+    background-color: #17a5e7;
+    /*表示使用flex布局*/
+    display: flex;
+    /*表示把justify-content和align-items那个先当作行修饰，默认是把justify-content当作行修饰，还可以控制排列顺序*/
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}

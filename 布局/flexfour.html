@@ -1,0 +1,16 @@
+<link rel="stylesheet" type="text/css" href="flexfour.css">
+<div class="box">
+    <div class="column">
+    <!-- 调试，父级影响，覆盖，透明，没有足够显示空间.未导入链接样式,没有保存,对应相应位置,语法不对没起作用-->
+        <span class="item" style="flex-shrink: 0;">111111111111111111111111111111111</span>
+        <span class="item" style="flex-grow:1;background-color: red;order: -1;">2</span>
+        <!-- 设定flex-grow值，不会覆盖之前的weight设定要先清空 -->
+        <span class="item " style="flex-grow:1;background-color: grey">1</span>
+        <span class="item" style="flex-grow:2;background-color: blue;align-self:flex-start;">2</span>
+    </div>
+    <!-- 定义多个模块嵌套使用或者使用选择器控制 -->
+    <div class="column">
+        <span class="item" >3</span>
+        <span class="item">4</span>
+    </div>
+</div>
