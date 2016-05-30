@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>向同一个元素中添加多个事件句柄</title>
+</head>
+
+<body>
+    <p>多个句柄添加</p>
+    <p>双击显示</p>
+    <script type="text/javascript">
+    // 监听事件逻辑清晰的写法，一个标签指定，对应一串事件指定和方法定义
+    var x = document.getElementsByTagName('p');
+    x[0].addEventListener('click', function() {
+        h();
+        i();
+    });
+    // 一个标签上面一种触发情况，可以指定多个事件，
+    // 一个标签上面可以添加多个触发情况
+    // 事件名上面去掉on
+    x[1].addEventListener('dblclick', function() {
+        j();
+    });
+
+    function h() {
+        alert('click');
+    }
+
+    function i() {
+        alert('second_click');
+    }
+
+    function j() {
+        alert('dbclick');
+    }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>removeEventListener() 方法</title>
+</head>
+
+<body>
+    <div>
+        lalala
+    </div>
+    <button onclick="h()" type="button">取消效果</button>
+    <script type="text/javascript">
+    var x = document.getElementsByTagName('div');
+    // 加载方法，直接在上面放上方法名，语句的话，放上function
+    x[0].addEventListener('click', myfunctuion)
+        // javascript定义的方法，调用，会在函数调用它的时候整个script上面搜索，不用考虑顺序，不过最好规范统一来写
+    function myfunctuion() {
+        x[0].innerHTML = Math.random();
+    }
+    var y = document.getElementsByTagName('button');
+
+    function h() {
+        // 取消之前的效果作用，已经作用了的，不会取消
+        x[0].removeEventListener("click", myfunctuion);
+        // x[0].style.color = "blue";
+        // y[0].removeEventListener('mouseover',myfunctuion);
+    }
+    </script>
+</body>
+
+</html>

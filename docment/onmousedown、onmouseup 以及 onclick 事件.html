@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>onmousedown、onmouseup 以及 onclick 事件</title>
+</head>
+
+<body>
+    <!-- 方法命名的时候，自定义的方法要加上下划线比较安全,构造函数来使用 -->
+    <h1 id="id" onmousedown="down(this)" onmouseup="up(this)" onclick="click1()">lalala</h1>
+    <!-- 触发的事件里面放的是运行命令，包括方法和普通命令语句 -->
+    <p id="ha">hahaha</p>
+    <script type="text/javascript">
+    function down(la) {
+        // log用于检测
+        console.log(la);
+        la.innerHTML = 'down';
+    }
+
+    function up(la) {
+        console.log(la);
+        la.innerHTML = 'up';
+    }
+    // 命名的时候敏感词小心和系统冲突，不确定的情况下，在前面加上下划线
+    function click1() {
+        var la = document.getElementById('ha');
+        console.log(la);
+        la.innerHTML = 'click';
+    }
+    </script>
+</body>
+
+</html>

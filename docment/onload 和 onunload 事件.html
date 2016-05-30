@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>onload 和 onunload 事件</title>
+</head>
+
+<body onload="h()">
+    <h1>lalala</h1>
+    <!-- 方法执行，script的事件执行，一个功能是存入相应的功能供后面标签使用，script的方法在执行script的方法，依次执行一次 -->
+    <script type="text/javascript">
+    // 事件触发，看条件触发，先加载好，后面再触发
+    var x = document.getElementsByTagName('h1');
+    x[0].style.color = 'red';
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>创建新的 HTML 元素</title>
+</head>
+
+<body>
+    <p>lalala</p>
+    <!-- 创建一个新标签之后，不会覆盖之前的新标签 -->
+    <script type="text/javascript">
+    var one = document.createElement('p');
+    var text = document.createTextNode('这是一个新标签');
+    one.appendChild(text);
+    var two = document.getElementsByTagName('p');
+    two[0].appendChild(one);
+    </script>
+</body>
+
+</html>

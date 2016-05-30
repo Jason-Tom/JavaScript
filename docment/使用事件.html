@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>使用事件</title>
+</head>
+
+<body>
+    <h1>lalalala</h1>
+    <button type="button" class="btn btn-primary" onclick="dianwo()">dianwo</button>
+    <script type="text/javascript">
+    function dianwo() {
+        var x = document.getElementsByTagName('h1');
+        // 数据形式：等号赋值形式、对象形式（属性名：属性值（一般要加上单引号，数字一般不用加））、数组对象形式（基于对象形式）、还有一个大括号多个对象形式
+        x[0].style = 'color:grey';
+    }
+    </script>
+</body>
+
+</html>

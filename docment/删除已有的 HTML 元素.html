@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html>
+
+<body>
+        <p id="p1">这是一个段落。</p>
+        <p id="p2">这是另一个段落。</p>
+    <script>
+    // var parent = document.getElementById("div1");
+    // var child = document.getElementById("p2");
+    // parent.removeChild(child);
+    // var child = document.getElementById("p1");
+    // child.parentNode.removeChild(child);
+    // 移除标签，先确定呢个标签，然后在移除
+    var child = document.getElementsByTagName('p');
+    // 两个都要指定child
+    child[1].parentNode.removeChild(child[1]);
+    </script>
+</body>
+
+</html>

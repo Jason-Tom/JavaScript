@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- 文本内容和单选框复选框改变的时候出发该事件 -->
+    <title>onchange 事件</title>
+</head>
+
+<body>
+    <h1></h1> 请输入：
+    <input id="one" type="text" onchange="h()">
+    <script type="text/javascript">
+    function h() {
+        console.log(156);
+        var x = document.getElementsByTagName('h1');
+        var int = document.getElementById('one');
+        // innerHTML对对双标签起作用
+        x[0].innerHTML = '已经输入内容:' + int.value;
+        // value对input类的属性起作用，有value属性值的
+    }
+    </script>
+</body>
+
+</html>

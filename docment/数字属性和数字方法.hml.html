@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>数字属性和数字方法</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+    var a = 'lalala';
+    var b = 9;
+    // constructor读取数据类型
+    if (a.constructor == String) {
+        console.log('字符串类型');
+    }
+    if (b.constructor == Number) {
+        console.log('数字类型');
+    }
+    console.log('数据最大值：' + Number.MAX_VALUE);
+    console.log('数据最小值：' + Number.MIN_VALUE);
+    var c = 29;
+    if (c < 1 || c > 12) {
+        c = Number.NaN;
+    }
+    console.log(c);
+    console.log('负无穷大：' + Number.NEGATIVE_INFINITY);
+    console.log('正无穷大：' + Number.POSITIVE_INFINITY);
+    var d = 8;
+    console.log('转换成5进制：' + d.toString(5));
+    if (d.toString(5).constructor == String) {
+        console.log('字符串类型');
+    }
+    if (d.constructor == Number) {
+        console.log('数字类型');
+    }
+    var e = 3.788956747;
+    console.log(e.toFixed(5));
+    var f = 14040;
+    // 转换成指数形式，小数点后一位使用四舍五入
+    console.log(f.toExponential(2));
+    var g = 12340;
+    // 转换成固定长度
+    console.log(g.toPrecision(2));
+    var h = '414';
+    console.log(h.valueOf());
+    console.log(h);
+    </script>
+</body>
+
+</html>

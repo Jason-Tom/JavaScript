@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>标签上面的this的使用</title>
+</head>
+
+<body>
+    <!-- this相当于当前的默认id（和id一个作用） -->
+    <h1 onclick="h(this)">标题一</h1>
+    <script type="text/javascript">
+    function h(lalala) {
+        lalala.innerHTML = 'hahaha';
+        lalala.style.color = 'blue';
+    }
+    </script>
+</body>
+
+</html>

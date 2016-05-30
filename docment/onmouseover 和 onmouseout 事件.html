@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>onmouseover 和 onmouseout 事件</title>
+</head>
+
+<body>
+    <h1 onmouseout="out()" onmouseover="over()">lalala</h1>
+    <script type="text/javascript">
+    function out() {
+        var x = document.getElementsByTagName('h1');
+        x[0].innerHTML = 'out';
+    }
+
+    function over() {
+        // 当普通变量使用
+        // 变量作用，当指针使用指定元素属性
+        var x = document.getElementsByTagName('h1');
+        x[0].innerHTML = 'over';
+    }
+    </script>
+</body>
+
+</html>

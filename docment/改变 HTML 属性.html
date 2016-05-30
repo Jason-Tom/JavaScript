@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- 属性是指对应的标签属性，并不是什么样式,然后使用字符串的形式对属性进行赋值,覆盖的是整个标签属性，像style样式会全部覆盖 -->
+    <title>改变 HTML 属性</title>
+</head>
+
+<body>
+    <img src="2.jpeg" style="width:700px;">
+    <h1 style="margin:10px;color:red;padding:20px;opacity:0.5;">asdfas</h1>
+    <script type="text/javascript">
+    var x = document.getElementsByTagName('img');
+    x[0].style = 'width:100%;';
+    var x = document.getElementsByTagName('h1');
+    x[0].style = 'color:yellow;';
+    </script>
+</body>
+
+</html>

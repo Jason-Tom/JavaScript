@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>事件冒泡或事件捕获</title>
+</head>
+
+<body>
+    <div>
+        <div>
+            <p>
+                lalala
+            </p>
+        </div>
+    </div>
+    <!-- 每个标签看作两个子标签和标签，然后来执行顺序 -->
+    <script type="text/javascript">
+    var x = document.getElementsByTagName('div');
+    x[0].addEventListener('click', function() {
+        console.log('触发了第一个div标签事件');
+    }, true)
+    x[1].addEventListener('click', function() {
+        console.log('触发了第二个div标签事件');
+    })
+    var y = document.getElementsByTagName('p');
+    y[0].addEventListener('click', function() {
+        console.log('触发了p标签事件');
+    }, true)
+    </script>
+</body>
+
+</html>

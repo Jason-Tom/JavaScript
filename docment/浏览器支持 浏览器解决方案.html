@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html>
+
+<body>
+    <p> Internet Explorer 8 及更早IE版本不支持addEventListener() 方法。</p>
+    <p>该实例演示了所有浏览器兼容的解决方法。</p>
+    <button id="myBtn">点我</button>
+    <script>
+    var x = document.getElementById("myBtn");
+    if (x.addEventListener) {
+        x.addEventListener("click", myFunction);
+    } else if (x.attachEvent) {
+        x.attachEvent("onclick", myFunction);
+    }
+
+    function myFunction() {
+        alert("sHello World!");
+    }
+    </script>
+</body>
+
+</html>

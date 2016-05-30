@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>向 Window 对象添加事件句柄</title>
+</head>
+
+<body>
+    <p>向 Window 对象添加事件句柄</p>
+    <script type="text/javascript">
+    // 给window事件添加监听事件的时候，要对应window事件里面的具体事件进行触发
+    window.addEventListener('load', function() {
+        alert('事件已经加载');
+    })
+    </script>
+</body>
+
+</html>

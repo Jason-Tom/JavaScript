@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>时间对象</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+    var a = new Date();
+    console.log(a);
+    // 该时间戳精确到秒
+    var b = Date.parse(new Date());
+    console.log(b);
+    //以下两种形式时间戳精确到毫秒
+    var c = (new Date()).valueOf();
+    console.log(c);
+    // 时间戳获取都要先new Date（）然后再转换形式
+    var d = new Date().getTime();
+    console.log(d);
+    var e = new Date();
+    console.log(e.getFullYear());
+    // 获取时间戳
+    console.log(e.getTime());
+    // 设定任意开始时间
+    e.setFullYear(1993, 4, 29);
+    console.log(e);
+    console.log(e.toUTCString());
+    console.log(e.getDay());
+    // 规范化，新建new Date() 然后通过具体方法设定
+    var today = new Date();
+    var d1 = new Date("October 13, 1975 11:13:00");
+    var d2 = new Date(79, 5, 24);
+    var d3 = new Date(79, 5, 24, 11, 33, 0);
+    console.log(today);
+    console.log(d1);
+    console.log(d2);
+    console.log(d3);
+    // 对象通过方法作用之后返回的还是对象
+    var f = new Date();
+    var g = f.setFullYear(2008, 8, 8);
+    // 日期的比较是字符串比较，数值越大，事件越后
+    if (f > g)
+    // 对比格式规范化
+        console.log('实际日期先于实际日期');
+    else
+        console.log('实际日期后于实际日期');
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>改变 HTML 内容</title>
+</head>
+
+<body>
+    <p class="one">one</p>
+    <h1>two</h1>
+    <script type="text/javascript">
+    var x = document.getElementsByClassName('one');
+    x[0].innerHTML = "lalala";
+    var y = document.getElementsByTagName('h1');
+    y[0].innerHTML='lalalala';
+    </script>
+</body>
+
+</html>

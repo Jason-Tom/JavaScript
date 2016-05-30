@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript 数字</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+    // javascript,对大小写是敏感的
+    var a = 17,
+        b = 9.998,
+        // e和x大小写一样用
+        c = 123E5,
+        d = 123e-5,
+        e = 065,
+        f = 0xe2,
+        g = 0Xa3;
+    console.log(a + ' ' + b + ' ' + c + ' ' + d + ' ' + e + ' ' + f + ' ' + g);
+    // 一个log输出一行
+    console.log('二进制:' + a.toString(2) + ' ' + '八进制:' + a.toString(8) + ' ' + '十六进制:' + a.toString(16) + ' ');
+    // 自动帮忙转换成几进制
+    console.log(a.toString(9));
+    console.log(a.toString(6));
+    var wuqiong = 2;
+    // Inifity可以当作一个判定变量
+    while (wuqiong != Infinity) {
+        // 不要用到中文的标点
+        wuqiong *= wuqiong;
+        console.log(wuqiong);
+    }
+    // 被除数不能为0
+    var la = 1;
+    console.log(la / 0);
+    console.log(-la / 0);
+    var ha = 9/'h';
+    console.log(ha) 
+    </script>
+</body>
+
+</html>

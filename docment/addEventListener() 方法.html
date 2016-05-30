@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>addEventListener() 方法</title>
+</head>
+
+<body>
+    <p>事件监听，就是把事件加载统一放到js里面统一形式</p>
+    <p>带参数</p>
+    <p>没带参数的一般写法</p>
+    <script type="text/javascript">
+    var x = document.getElementsByTagName('p');
+    x[0].addEventListener('click', function() {
+        alert('事件监听，就是把事件加载统一放到js里面统一形式')
+    });
+    // 监听事件的加载方法，通过function在大括号里面加载语句或者方法
+    x[1].addEventListener('click', function() {
+        h(2, 3);
+    })
+    x[2].addEventListener('click', function() {
+        i();
+    })
+
+    function h(a, b) {
+        // alert显示字符串直接放上字符串，入股如果是参数直接放上去
+        alert(a + b);
+    }
+
+    function i() {
+        alert('没参数监听事件的一般写法');
+    }
+    </script>
+</body>
+
+</html>

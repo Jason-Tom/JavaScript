@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <script type="text/javascript">
+    // 创建对象
+    var _new = new Object();
+    // 通过点创建属性，并且赋值
+    _new.one = 'one';
+    _new.two = 'two';
+    console.log('_new.one:' + _new.one + ' ' + '_new.two:' + _new.two)
+        // 直接通过对象集合创建对象属性，前面的属性名不用生命类型，javascript会自动识别
+    _newtwo = {
+        // 每个属性逗号隔开
+        one: 'lalala',
+        two: 'hahaha',
+    }
+    console.log(_newtwo.one + " " + _newtwo.two)
+    </script>
+</body>
+
+</html>

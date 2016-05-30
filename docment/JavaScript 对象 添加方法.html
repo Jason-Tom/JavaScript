@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>把方法添加到 JavaScript 对象</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+    function duixiang(age, name, height) {
+        this.age = age;
+        this.name = name;
+        this.height = height;
+
+        // 定义一个属性指定方法，不用考虑声明顺序
+        this.chancename = chancename;
+
+        // 方法传递的参数和创建对象的参数不相互干扰
+        function chancename(chancename) {
+            // this对应的属性名是创建对象是对应的参数对应
+            this.name = chancename;
+        }
+    }
+    myduixiang = new duixiang('la', 'ha', 'ga');
+    myduixiang.chancename('xi');
+    console.log(myduixiang.age + ' ' + myduixiang.name + ' ' +
+        myduixiang.height);
+    </script>
+</body>
+
+</html>

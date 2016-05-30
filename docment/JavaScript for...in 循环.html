@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript for...in 循环</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+    test = {
+        one: 'la',
+        two: 'ha',
+        three: 'ga'
+    };
+    // 定义变量规范化，加上初始化
+    var chuan = '';
+    var y = 0;
+    // for不加上初始化，前面会出现一个undefine
+    // 是指把每一个对象，都循环一次
+    for (x in test) {
+        // chuan = chuan + test[x];
+        // 经常会打错，用好自动匹配提示，和debug工具
+        chuan += test[x];
+    }
+    console.log(chuan);
+
+    function myFunction() {
+        var x;
+        var txt = "";
+        var person = {
+            fname: "Bill",
+            lname: "Gates",
+            age: 56
+        };
+
+        for (x in person) {
+            txt = txt + person[x];
+        }
+
+        console.log(txt);
+    }
+    myFunction();
+    </script>
+</body>
+
+</html>

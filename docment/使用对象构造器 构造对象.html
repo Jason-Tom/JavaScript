@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>使用对象构造器</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+    // 创建对象function，放上属性和this对应，
+    function duixiang(one, two, three) {
+        // 分号给我开
+        this.one = one;
+        this.two = two;
+        this.three = three;
+    }
+    // 写完一句加上分号比较保险
+    // 新建对象，依照顺序给对象属性赋值
+    myduixiang = new duixiang('lalala', 'hahaha', 'gagaga');
+    // 对象已存在可以这样添加属性并且赋值，对象不存在可以直接这样创建对象，并且新建属性再赋值
+    myduixiang.four = 'xixixi';
+    console.log(myduixiang.one + ' ' + myduixiang.two + ' ' + myduixiang.three + ' ' + myduixiang.four);
+    </script>
+</body>
+
+</html>

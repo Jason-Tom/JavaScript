@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>onmousedown、onmouseup 以及 onclick 事件</title>
+</head>
+
+<body>
+    <!-- 方法命名的时候，自定义的方法要加上下划线比较安全 -->
+    <h1 id="id" onclick="click1()">lalala</h1>
+    <!-- 触发的事件里面放的是运行命令，包括方法和普通命令语句 -->
+    <p id="ha">hahaha</p>
+    <script type="text/javascript">
+
+    function click1() {
+        var la = document.getElementById('ha');
+        console.log(la);
+        la.innerHTML = 'click';
+    }
+    </script>
+</body>
+
+</html>
