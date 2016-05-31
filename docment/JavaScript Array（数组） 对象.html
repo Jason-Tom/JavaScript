@@ -7,7 +7,118 @@
 </head>
 
 <body>
+    <script type="text/javascript">
+    var a = new Array();
+    a[0] = 'la';
+    a[1] = 'ha';
+    a[2] = 'ga';
 
+    // for  遍历对象 x自己实现递增
+    for (x in a) {
+        console.log(a[x]);
+    }
+    // 简介方法创建数组
+    var b = new Array('la', 'ga', 'ha');
+    console.log(b[0] + ' ' + b[1] + ' ' + b[2]);
+    // 简介数组创建方法二
+    // 数组元素是对象可以有不同类型，
+    var c = ['la', new Date(), 'ha'];
+    console.log(c[0] + ' ' + c[1] + ' ' + c[2]);
+    console.log('c 数组长度：' + c.length);
+    // 方法输入的，除了数字和对象，其他的都要加‘’
+    console.log('c index：' + c.indexOf('ha'));
+    var p = [];
+    p.push('la');
+    p.push('ha');
+    p.push('ga');
+    console.log(p[0] + ' ' + p[1] + ' ' + p[2]);
+
+    p.forEach(function(item, i) {
+        console.info(item, i);
+    })
+
+    var d = [];
+    d.push('as');
+    d.push('df');
+    var e = [];
+    e.push('fg');
+    e.push('hj');
+    var f = [];
+    f.push('kl');
+    f.push('qw');
+    console.log(d.concat(e));
+    console.log(d.concat(e, f));
+
+    var h = [];
+    h.push('asdf');
+    h.push('ghjk');
+    console.log(h.join());
+    h.pop();
+    console.log(h);
+    // push()直接输出是索引
+    e.push('asdfasdf');
+    console.log(e, e.push('asdfasdf'));
+
+    var i = [];
+    i.push('qwe');
+    i.push('rty');
+    console.log(i.reverse());
+    i.shift();
+    console.log(i);
+
+    var j = [];
+    j.push('qwe');
+    j.push('rty');
+    j.push('799');
+    // start开始包括start，不包括stop
+    console.log(j.slice(1, 2));
+
+    var k = [];
+    k.push('cwe');
+    k.push('bty');
+    k.push('Aty');
+    k.push('Aay');
+    k.push('a');
+    k.push('2');
+    k.push('1');
+    // 字符串排列，先排列数字后排列字母（字母先排列大写）
+    console.log(k.sort());
+    // 倒叙的话使用reverse
+    console.log(k.reverse());
+
+    var l = [];
+    l.push('4');
+    l.push('6');
+    l.push('23');
+    l.push('22');
+    l.push('1');
+    // 数字排序才支持倒序函数
+    console.log(l.sort(function(a, b) {
+        return b - a
+    }));
+
+    var m = [];
+    m.push('4');
+    m.push('6');
+    m.push('23');
+    m.push('22');
+    m.push('1');
+    // 表示在第几个位置开始插入，1表示要删除的原原数组位置，后面是添加项目
+    m.splice(1, 1, 'asdf', 'asdf');
+    console.log(m);
+    // 数组转换成字符串会自动在每一项之间添加逗号
+    console.log(m.toString());
+
+    var n = [];
+    n.push('4');
+    n.push('6');
+    n.push('23');
+    n.push('22');
+    n.push('1');
+    n.splice(1, 1, 'asdf', 'asdf');
+    n.unshift('asdf','asdf');
+    console.log(n);
+    </script>
 </body>
 
 </html>

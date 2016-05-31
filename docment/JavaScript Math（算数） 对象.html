@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Math（算数） 对象</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+    // 四舍五入取整，里面一定放的是负数
+    var a = 3.5;
+    console.log(Math.round(a));
+
+    var a = -3.4;
+    console.log(Math.round(a));
+
+    var a = -3.6;
+    console.log(Math.round(a));
+
+    var a = 0.023;
+    console.log(Math.round(a));
+
+    // 17位伪随机数
+    var b = Math.random();
+    console.log(b);
+    console.log(b.toString().length);
+
+    // 涉及Math的都要加上改前缀
+    var c = 9,
+        d = 7;
+    console.log(Math.max(c, d));
+
+    var c = 9,
+        d = 7;
+    console.log(Math.min(c, d));
+
+    // 涉及Math的都要加上改前缀，大写，固定
+    console.log(Math.E);
+    console.log(Math.LN2);
+    console.log(Math.LN10);
+    console.log(Math.LOG2E);
+    console.log(Math.PI);
+    console.log(Math.SQRT1_2);
+    console.log(Math.SQRT2);
+
+    // 涉及Math的都要加上改前缀
+    console.log(Math.abs(-4));
+    console.log(Math.acos(0.5));
+    console.log(Math.asin(0.5));
+    console.log(Math.atan(0.5));
+    console.log(Math.ceil(0.1));
+    console.log(Math.floor(1.6));
+    console.log(Math.exp(1));
+    console.log(Math.log(Math.E));
+    console.log(Math.max(1,2,1,2,345,2,34,12.213));
+    console.log(Math.min(1,2,1,2,345,2,34,12.213));
+    console.log(Math.pow(2,2));
+    console.log(Math.sin(Math.PI/6));
+    // console.log(Math.round(Math.sin(Math.PI/6)));
+    // console.log(Math.sin(Math.asin(0.5)));
+
+    </script>
+</body>
+
+</html>

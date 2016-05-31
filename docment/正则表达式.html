@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>正则表达式</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+    var a = 'fasdf4aedfag4asf';
+    // 第一部分是匹配的字符串（或规则），第二部分是匹配的规则
+    var b = /4a/g;
+    // 正则表达式返回的结果是数组对象
+    console.log(a.match(b));
+    document.write(a.match(b));
+
+    var c = 'fasdf4aedfag4asf';
+    // 正则表达式的原始写法
+    var d = new RegExp('fa', 'g');
+    console.log(c.match(d));
+    document.write(c.match(d));
+
+    var c = 'Fasdf4aedfag4asf';
+    // g没用
+    var d = /fa/g;
+    // 默认对大小写敏感（其他方法也是），非全局匹配（只匹配第一个），找的是索引(结果是一个常数)
+    console.log(c.search(d));
+
+    var c = 'Fasdf4aedfag4asf';
+    var d = /fa/gi;
+    // 返回一个结果数组
+    console.log(c.match(d));
+
+    var c = 'Fas41df24a47dfag24asf';
+    var d = /\d+/g;
+    console.log(c.match(d));
+
+    var c = 'Fas41df24aS47dfag24asf';
+    var d = /as/g;
+    // 替换之后返回一个字符串结果，不改变原字符串
+    // 规则组合，不按顺序
+    // 包括了删除增加修改功能
+    console.log(c.replace(/as/gi, "lalalala"));
+
+    var str = "isissdf Is  iidsdfsis fgh";
+    var patt1 = /(is)*sdf/gi;
+    console.log('^*?区别：' + str.match(patt1));
+
+    var str = "weissdf Is  iidsdfsis fgh";
+    // ()规范好运算顺序，不然*+会默认左边第一个字符而不是字符串
+    var patt1 = /(is)+sdf/gi;
+    console.log('^*?区别：' + str.match(patt1));
+
+    var str = "weissdf Is  iidsdfsis fgh";
+    // ()规范好运算顺序，不然*+会默认左边第一个字符而不是字符串
+    var patt1 = /(is)?sdf/gi;
+    console.log('^*?区别：' + str.match(patt1));
+
+    name = "Doe, John";
+    // replace正则表达式可以和后面的字符串对应
+    console.log(name.replace(/(\w+)\s*, \s*(\w+)/, "$2 $1"));
+
+    var str = "weissdf Is  iidsdfsis fgh";
+    var patt1 = /^wei/gi;
+    console.log(str.match(patt1));
+
+    var str = "weissdf Is  iidsdfsis fgh";
+    var patt1 = /fgh$/gi;
+    console.log(str.match(patt1));
+
+    var str = "moon";
+    // 匹配单词边界要注意放哪边,单边匹配（如何使用条件组合）
+    var patt1 = /on\b/;
+    var patt2 = /oo\b/;
+    var patt3 = /oon\b/;
+    var patt4 = /\w\b\w/;
+
+    console.log(str.match(patt1));
+    console.log(str.match(patt2));
+    console.log(str.match(patt3));
+    console.log(str.match(patt4));
+
+    var a = 'asdf dfgd sdf';
+    var b = /\bd/g;
+    // 选出字符然后交给后面的处理，直接交换，字符串方法处理
+    console.log(a.replace(b, function(word) {
+        return word.substring(0, 1).toUpperCase() + word.substring(1);
+    }));
+
+    var a = "How are you doing today?";
+    console.log(a.split(' ', 3))
+
+    var str = "Every man in the world! Every woman on earth!";
+    patt = /man/g;
+    str2 = str.replace(patt, "person");
+    console.log(str2);
+    patt = /(wo)?man/g;
+    //  直接覆盖或者新建正则表达式就好了
+    // patt.compile(patt);
+    str2 = str.replace(patt, "person");
+    console.log(str2);
+
+    // 对象方法对象放在前面
+    var a = "Visit W3School, W3School is a place to study web technology.";
+    var b = /W3School/gi;
+    // 字符串位置和正则表达式的反过来
+    console.log(b.exec(a));
+
+    var a = 'lalala';
+    var b = /al/g;
+    // 字符串位置和正则表达式的反过来
+    console.log(b.test(a));
+    </script>
+</body>
+
+</html>

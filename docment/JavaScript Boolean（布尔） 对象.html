@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Boolean（布尔） 对象
+    </title>
+</head>
+
+<body>
+    <script type="text/javascript">
+    // js重复定义变量不会报错,会覆盖前面的
+    var a = 8;
+    var a = 9;
+    console.log(a);
+
+    var b = new Boolean();
+    console.log(b);
+    // 获取属性值.valueOf()方法，或者具体.属性名
+    console.log(b.valueOf());
+
+    // 作用就是判断改制是否为真
+    // new Boolean(value);  //构造函数
+    // Boolean(value);   //转换函数
+    var b = new Boolean(null);
+    console.log(b);
+    console.log(b.valueOf());
+
+    var b = new Boolean(0);
+    console.log(b);
+    console.log(b.valueOf());
+
+    var b = new Boolean(-0);
+    console.log(b);
+    console.log(b.valueOf());
+
+    var b = new Boolean('');
+    console.log(b);
+    console.log(b.valueOf());
+
+    var b = new Boolean(false);
+    console.log(b);
+    console.log(b.valueOf());
+
+    var b = new Boolean(NaN);
+    console.log(b);
+    console.log(b.valueOf());
+
+    var b = new Boolean(1);
+    console.log(b);
+    console.log(b.valueOf());
+
+    var b = new Boolean(2);
+    console.log(b);
+    console.log(b.valueOf());
+
+    var b = new Boolean(' ');
+    console.log(b);
+    console.log(b.valueOf());
+
+    var b = new Boolean('\'\'');
+    console.log(b);
+    console.log(b.valueOf());
+
+    var b = new Boolean(true);
+    console.log(b);
+    console.log(b.valueOf());
+
+    var b = new Boolean('false');
+    console.log(b);
+    console.log(b.valueOf());
+
+    var b = new Boolean('false');
+    console.log(b);
+    if (b.constructor == Boolean)
+        console.log('这是布尔类型');
+
+    function la(a, b) {
+        this.a = a;
+        this.b = b;
+    }
+
+    var c = new la(true, false);
+
+    la.prototype.c = true;
+
+    la.prototype.changeName = changeName;
+    function changeName(name) {
+        this.a = name;
+    }
+
+    c.changeName(false);
+    console.log(c.a);
+
+    var b = new Boolean('false');
+    console.log(b);
+    console.log(b.toString());
+    console.log(b.valueOf());
+    </script>
+</body>
+
+</html>
