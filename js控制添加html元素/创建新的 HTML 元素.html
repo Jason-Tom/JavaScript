@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <style type="text/css" media="screen">
+    #div1 {
+        background-color: green;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="div1">
+        <p id="p1">这是一个段落。</p>
+        <p id="p2">这是另一个段落。</p>
+    </div>
+    <span id="gagaga" class="gagaga">gagaga</span>
+    <script>
+    var para = document.createElement("p");
+    var node = document.createTextNode("这是新段落。");
+    para.appendChild(node);
+
+    // var element = document.getElementById("div1");
+    // var element = document.getElementById("gagaga");
+    var element = document.getElementsByClassName('gagaga')[0];
+    element.appendChild(para);
+    // appendChild和jquery的相似
+    </script>
+</body>
+
+</html>

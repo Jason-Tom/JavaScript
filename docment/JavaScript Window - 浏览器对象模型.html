@@ -1,1 +1,57 @@
-JavaScript Window - 浏览器对象模型.html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Window - 浏览器对象模型</title>
+</head>
+
+<body>
+    <button type="button" class="btn btn-default" onclick="_open()">通过js打开窗口</button>
+    <script type="text/javascript">
+    var a = window.innerHeight || document.documentElement.clientWidth || document.body.clientWidth;
+
+    var b = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+    console.log(a + ' ' + b);
+
+    function _open() {
+        // 属性按照顺序显示，没有的用空字符串代替，第一个是链接，第二个是打开方式，第三块修饰窗口字符串
+
+        window.open('http://www.runoob.com/js/js-window.html', '_blank');
+        window.open('http://www.w3school.com.cn/jsref/met_win_open.asp', '_blank', 'width = 400,height=400');
+    }
+
+    var a = window.screen.availWidth;
+    var b = screen.availHeight;
+    console.log(a + ' ' + b);
+    document.write(a + ' ' + b);
+
+    // 要发布到服务器上面才能读取到相关信息
+    console.log(location.href);
+    console.log(location.hostname);
+    console.log(location.port);
+    console.log(location.protocol);
+
+    function shang() {
+        window.history.back();
+    }
+
+    function xia() {
+        window.history.forward();
+    }
+
+    function goForward() {
+        window.history.forward()
+    }
+
+    function goBack() {
+        window.history.back()
+    }
+    </script>
+    <button type="button" class="btn btn-primary" onclick="shang()">上一页</button>
+    <button type="button" class="btn btn-primary" onclick="xia()">下一页</button>
+    <input type="button" value="Forward" onclick="goForward()">
+    <input type="button" value="Back" onclick="goBack()">
+</body>
+
+</html>

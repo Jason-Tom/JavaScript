@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript 弹窗</title>
+</head>
+
+<body>
+    <button type="button" class="btn btn-primary" onclick="_alert()">警告弹窗</button>
+    <button type="button" class="btn btn-primary" onclick="_confirm()">确认弹窗</button>
+    <button type="button" class="btn btn-primary" onclick="_prompt()">输入弹窗</button>
+    <script type="text/javascript">
+    function _alert() {
+        // window.alert('警告');
+        alert('这是警告内容\n啦啦啦啦！');
+    }
+
+    function _confirm() {
+        var a = window.confirm();
+        if (a == true)
+            console.log('你按下了确定按钮' + a);
+        else
+            console.log('你按下了取消按钮' + a);
+    }
+
+    function _prompt() {
+      // 前面是提示信息，后面是默认输入信息，整个方法返回输入的字符串
+        var a = prompt('Please input your name', 'Tom');
+        if (a != null && a != '')
+            console.log('hello ' + a)
+          else
+            console.log('Please input your name！')
+    }
+    </script>
+</body>
+
+</html>

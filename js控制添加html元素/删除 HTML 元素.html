@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <style type="text/css" media="screen">
+
+    </style>
+</head>
+
+<body>
+    <div id="div1">
+        <p id="p1">这是一个段落。</p>
+        <p id="p2">这是另一个段落。</p>
+    </div>
+    <script>
+    // var parent = document.getElementById("div1");
+    // var child = document.getElementById("p1");
+
+    var child = document.getElementById("p1");
+    // 找到子元素
+    child.parentNode.removeChild(child);
+    // 找到子元素父元素，删除自己
+    parent.removeChild(child);
+    // removeChild和removed（）方法相似，删除选定，包括自己
+    </script>
+</body>
+
+</html>

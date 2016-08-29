@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript 计时事件</title>
+</head>
+
+<body>
+    <p id="la"></p>
+    <button type="button" class="btn btn-primary" onclick="_stop_time()">停止时间</button>
+    <button type="button" class="btn btn-primary" onclick="_clear_Timeout()">停止clearTimeOut</button>
+    <script type="text/javascript">
+    // 前面是一个构造函数，要实现的方法，都要放在该构造函数下面,刚开始第一次不会显示，会一直循环重复显示
+    // setInterval(function() {
+    //     alert('asdf');
+    // }, 1000);
+
+    var asd = setInterval(function() {
+        // 每次都要创建时间对象，实现事件更新
+        document.getElementById('la').innerHTML = new Date();
+    }, 1000);
+
+    function _stop_time(argument) {
+        console.log('asf');
+        // 停止的时间间隔函数，要使用变量指定，不然相当于直接创建setInterval再停止该函数
+        clearInterval(asd);
+    }
+
+    // 相当于一次性用法的setInterval
+    var haha = setTimeout(function() {
+        console.log('lalala')
+    }, 2000);
+
+    function _clear_Timeout() {
+        clearTimeout(haha);
+    }
+    </script>
+</body>
+
+</html>
