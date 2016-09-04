@@ -1,0 +1,15 @@
+﻿<html>
+
+<body>
+    <script type="text/javascript">
+    var str = "Hello world!world!"
+    document.write(str.match("world") + "<br />")
+        // 匹配该字符串是否存在str中，如果有则返回，没有则返回空值（只是返回值和个数没关系）
+        // 批量检测字符串是否存在
+    document.write(str.match("World") + "<br />")
+    document.write(str.match("worlld") + "<br />")
+    document.write(str.match("world!"))
+    </script>
+</body>
+
+</html>

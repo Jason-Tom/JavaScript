@@ -1,0 +1,14 @@
+﻿<html>
+
+<body>
+    <script type="text/javascript">
+    var str = "H 啦ello wor  啦ld!"
+    document.write(str.lastIndexOf("Hello") + "<br />")
+    document.write(str.lastIndexOf("World") + "<br />")
+    document.write(str.lastIndexOf("啦") + "<br />")
+    // 输出的索引是顺序的索引，空格多个算多个，有多个匹配字符串从后面开始选取第一个的位置
+    document.write(str.lastIndexOf("world",4))
+    </script>
+</body>
+
+</html>

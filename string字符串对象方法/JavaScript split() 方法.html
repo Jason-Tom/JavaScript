@@ -1,0 +1,17 @@
+﻿<html>
+
+<body>
+    <script type="text/javascript">
+    var str = "How are you doing today?"
+
+    document.write(str.split(" ") + "<br />")
+        // 返回的切割字符串不包括标志字符串本身，切割的不会再参与，返回前面的那一段
+        // 最终返回值是一个字符串数组
+    document.write(str.split("") + "<br />")
+    document.write(str.split(" ", 4))
+        // 后面的数字是切割多少个满足条件的东东放进数组，而不是切割的长度
+    </script>
+    <!-- 整理数据，例如整理成json数据 -->
+</body>
+
+</html>
