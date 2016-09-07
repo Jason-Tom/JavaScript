@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript">
+    var x = 1;
+    var y = 2;
+
+    function lalala() {
+        // 理解为window的一个对象,稍微有别于一般对象
+        // this.x = 3;
+        // 全局变量已经存在的会被它覆盖
+        var x = 0;
+        // 如果不定义的话，会默认默认为全局变量
+        x = 3;
+        console.log(x);
+        console.log(y);
+        // this引进来之后能直接使用
+    }
+    lalala();
+    console.log("最终：" + x);
+    console.log("最终：" + y);
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript">
+    var x = 2;　　
+    function test() {　　
+        this.x = 1;　　　　
+        var x = 1;　　
+        // 不能成为自己对象的全局变量
+    }　　
+    var o = new test();
+    console.log("自己对象：" + o.x);
+    // 自己是对象，this就是指定自己，this.x声明的变量就是自己的全局变量
+    var p = {};　　 
+    p.x = 4;　　 
+    p.m = test; 
+    p.m(); 
+    console.log("对象：" + p.x);
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

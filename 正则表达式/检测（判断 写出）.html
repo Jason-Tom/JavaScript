@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>菜鸟教程(runoob.com)</title>
+</head>
+
+<body>
+    <!-- <input type="text" value="hahaha" name="" placeholder="输入测试文本"> -->
+    <input type="text" name="" placeholder="输入测试文本">
+    <button onclick="lalala()">确定</button>
+    <!-- 原生方法调用上面要加上括号 -->
+    <script>
+    var str = "Visit W3CSchool";
+    // 操作对象是字符串
+    var patt1 = /w3cschool/i;
+    // document.write(str.match(patt1));
+    // match通过write输出匹配后的字符串
+    // console.log(str.match(patt1)[0]);
+    // 通过'0'索引读取匹配后的字符串
+    // console.log(str.match(patt1).index);
+    // console.log()输出一个数组对象
+    // 操作方法有字符串对象方法决定
+    // 操作规则由正则表达式决定
+    var gagaga = document.getElementsByTagName('input');
+    // var inputText = gagaga[0].value;
+    // 全局变量没有错，只是全局变量获取的值没有在触发方法的时候更新
+    function lalala() {
+        var inputText = gagaga[0].value;
+        // .value获取input输入值没错
+        // alert('lalala');
+        alert(inputText);
+        // gagaga[0].value = "lalala";
+        // 获取文本值
+        if (inputText == "w3cschool") {
+            // 判断，通过检测出来的字符串进行比较
+            alert("success");
+        } else {
+            alert("false");
+        }
+    }
+    </script>
+</body>
+
+</html>

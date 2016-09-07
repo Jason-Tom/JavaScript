@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript">
+    var x = 1;
+
+    function lalala() {
+        this.x = 3;
+    }
+
+    function gagaga() {
+        function lalala() {
+            this.x = 3;
+        }
+        lalala();
+    }
+    gagaga();
+    console.log(x);
+    // 多层奇拿套也是同样指向全局
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

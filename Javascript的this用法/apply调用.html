@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript">
+    var x = 0;　　
+    function test() {　　　　
+        console.log(this.x);　
+        this.x = 9;　
+        console.log(this.x);　
+    }　　
+    var o = {};　　
+    o.x = 1;　　
+    o.m = test;　　
+    // o.m.apply();
+    o.m.apply(o.m);
+    // 方法执行有顺序之分
+    // 指定该方法的父级对象是哪个
+    // o.m.apply(o); 
+    //1
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>
