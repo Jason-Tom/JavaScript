@@ -1,0 +1,46 @@
+<html>
+
+<head>
+    <style type="text/css" media="screen">
+    span {
+        background-color: pink;
+    }
+    </style>
+</head>
+
+<body>
+    <span>lalala</span>
+    <span>lalala</span>
+    <span>lalala</span>
+    <span>lalala</span>
+    <script type="text/javascript">
+    var str = '  sdf  ';
+    var str1 = 'sdf';
+    // 去除干净两端空格
+    console.log(str);
+    console.log(str1);
+    console.log(str.trim());
+    console.log(str.trim() + str.trim());
+    console.log(str.trim() + str);
+    var lalala = document.getElementsByTagName('span');
+    lalala[0].onclick = function() {
+        lalala[0].innerHTML = str;
+        // 默认回去出两端空格，因为当成html元素输入了
+        // lalala[0].style.backgroundColor = 'green';
+    }
+    lalala[1].onclick = function() {
+        lalala[1].innerHTML = str1;
+        // lalala[0].style.backgroundColor = 'green';
+    }
+    lalala[2].onclick = function() {
+        lalala[2].innerHTML = str.trim();
+        // lalala[0].style.backgroundColor = 'green';
+    }
+    lalala[3].onclick = function() {
+        lalala[3].innerHTML = str.trim() + str.trim();
+        // lalala[0].style.backgroundColor = 'green';
+    }
+    </script>
+</body>
+
+</html>

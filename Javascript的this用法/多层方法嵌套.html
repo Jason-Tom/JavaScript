@@ -7,19 +7,25 @@
     <script type="text/javascript">
     var x = 1;
 
-    function lalala() {
-        this.x = 3;
-    }
+    function hahaha() {
+        var _gagaga = this;
 
-    function gagaga() {
-        function lalala() {
-            this.x = 3;
+        function gagaga() {
+            // var _xixixi = _gagaga;
+            var _xixixi = this;
+
+            function lalala() {
+                _xixixi.x = 3;
+            }
+            lalala();
         }
-        lalala();
+        gagaga();
+        // 方法定义不等于执行
     }
-    gagaga();
+    // gagaga();
+    hahaha();
     console.log(x);
-    // 多层奇拿套也是同样指向全局
+    // this只能穿透到方法上一层
     </script>
 </head>
 
