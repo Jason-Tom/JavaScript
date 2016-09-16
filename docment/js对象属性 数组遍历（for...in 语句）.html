@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document
+    </title>
+</head>
+
+<body>
+    <script type="text/javascript">
+    var x = 2;
+    var mycars = new Array()
+    mycars[0] = "宝马"
+    mycars[1] = {
+        lalala: 'lalala'
+    }
+    mycars[2] = "宾利"
+
+    for (x in mycars) {
+        // 创建对象用作索引，指定对象将他作为数组进行遍历
+        // 只能全部遍历完（特殊遍历要用到普通循环语句设定）
+        console.log(mycars[x]);
+    }
+
+    var lalala = new Object();
+    lalala.aa = 'aaa';
+    lalala.bb = 'bbb';
+    lalala.cc = 'ccc';
+    var y = 0;
+    for (y in lalala) {
+        console.log(lalala[y]);
+    }
+    // 遍历对象
+    var z = 0;
+    for (z = 1; z < 2; z++) {
+        console.log(lalala[y]);
+    }
+    console.log(mycars.length);
+    // 数组数组长度能够获取，即便里面有索引也当作一个数组元素
+    console.log(lalala.length);
+    // 对象长度无法获取
+    var v = 0;
+    var u = 0;
+    for (v in lalala) {
+        u++;
+        // 变量要先定义后使用
+    }
+    // 全局变量已经存在的会被覆盖
+    console.log(u);
+    // 通过遍历获取对象长度
+    </script>
+</body>
+
+</html>

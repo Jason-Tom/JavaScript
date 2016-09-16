@@ -11,11 +11,35 @@
     console.log('_new.one:' + _new.one + ' ' + '_new.two:' + _new.two)
         // 直接通过对象集合创建对象属性，前面的属性名不用生命类型，javascript会自动识别
     _newtwo = {
-        // 每个属性逗号隔开
-        one: 'lalala',
-        two: 'hahaha',
-    }
-    console.log(_newtwo.one + " " + _newtwo.two)
+            // 每个属性逗号隔开
+            one: 'lalala',
+            two: 'hahaha',
+            three: 555,
+            three: 666,
+            four: [{
+                five: 'xixixi',
+                six: 'zezeze'
+            }, {
+                five: 'xixixi1',
+                six: 'zezeze1'
+            }],
+            // 对象向里面还能包含数组
+            // 又重复的对象会把前面的同名对象值覆盖掉
+        }
+        // 对象是数值和字符串
+    console.log(_new.one + " " + _new.two)
+    console.log(_newtwo.one + " " + _newtwo.two + " " + _newtwo.three + " " + _newtwo.four[1].five)
+        // _newthree = {
+        //     'hehehe'
+        // };
+        // console.log(_newthree);
+        // 对象里面有两种形式（键值对和数值）（单纯的值形式直接用变量获取）
+    var qqq = {
+        aa: 'aaa',
+        bb: 'bbb'
+    };
+    // 直接创建对象
+    console.log(qqq.aa + " " + qqq.bb);
     </script>
 </body>
 
