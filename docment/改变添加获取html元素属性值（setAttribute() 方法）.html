@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+
+<body>
+    <input value="OK">
+    <p id="demo">点击按钮来设置按钮的 type 属性。</p>
+    <button onclick="myFunction()">试一下</button>
+    <img src="1.jpg" alt="gagaga">
+    <button onclick="myimg()">myimg试一下</button>
+    <script>
+    function myFunction() {
+        // document.getElementsByTagName("INPUT")[0].setAttribute("type", "button");
+        // document.getElementsByTagName("INPUT")[0].setAttribute("value", "lalala");
+        // document.getElementsByTagName("INPUT")[0].setAttribute("style", "background-color: red");
+        // 传入的是一个字符串
+        document.getElementsByTagName("INPUT")[0].setAttribute("hahaha", "gagaga");
+        console.log(document.getElementsByTagName('INPUT')[0].getAttribute("hahaha"));
+        // 已经存在的属性，能能修改属性值，也可以自定义属性，并且赋值
+    }
+    // 多个属性值，批量添加和设定
+    function myimg() {
+        document.getElementsByTagName('img')[0].setAttribute('src', '2.jpeg');
+        console.log(document.getElementsByTagName('img')[0].getAttribute("src"));
+    }
+    </script>
+    <p>Internet Explorer 8 以及更早的版本不支持此方法。</p>
+    <!-- 用来储存html在http请求获取的值，以备下一次请求发送数据 -->
+    <!-- 也可以添加一个dom隐藏起来，专门用来存值（内容多的时候用这种方式）（也可以全部存到文本上在解析字符串） -->
+    <!-- 通过属性来操作dom -->
+</body>
+
+</html>
