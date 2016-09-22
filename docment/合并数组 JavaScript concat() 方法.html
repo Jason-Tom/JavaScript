@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document
+    </title>
+</head>
+
+<body>
+    <script type="text/javascript">
+    var arr = new Array(3)
+    arr[0] = "George"
+    arr[1] = "John"
+    arr[2] = "Thomas"
+
+    var arr2 = new Array(3)
+    arr2[0] = "James"
+    arr2[1] = "Adrew"
+    arr2[2] = "Martin"
+    var arr3 = new Array(2)
+    arr3[0] = "William"
+    arr3[1] = "Franklin"
+    var xixixi = {
+        ooo: 'gegege'
+    };
+    var lalala = arr.concat(arr2, arr3, 1, 3, 'hahaha', xixixi);
+    console.log(arr);
+    lalala = lalala.concat('hehehe');
+    lalala = lalala.concat('hehehe');
+    // 要先刚在自身基础上合并，就像上面那样，（相比push他会合并数组不会嵌套数组，不用向push解析后再合并）
+    // 结果产生新的数组，原来的数组不变
+    // 能直接放置对象、字符串等对象上去(总的来说能放对象)
+    // 能合并多个数组
+    // 返回的就是一个合并好的数组，能直接使用，但是为了便于操作，用变量装起来更好
+    // 数组对象log出来，能看见他的所有属性和方法
+    // 循环合并添加，使用数组操作方法
+    for (x in lalala) {
+        console.log(lalala[x]);
+    }
+    // 用途有限少数的对象合并
+    </script>
+</body>
+
+</html>

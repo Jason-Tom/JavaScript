@@ -7,11 +7,11 @@
 </head>
 
 <body>
-    <!-- this的意义是把这个标签传递到函数，而by(id)是指指定该标签 ，但是很多情况下意义是相同的-->
-    <h1 id="id" onclick="click1(this)">lalala</h1>
+    <!-- this的意义？？？？？-->
+    <h1 id="id" onclick="click1()">lalala</h1>
     <p id="ha">hahaha</p>
     <script type="text/javascript">
-    function click1(la) {
+    function click1() {
         var la = document.getElementById('ha');
         la.innerHTML = 'click';
     }
@@ -19,16 +19,22 @@
     var x = 9;
 
     function h(i) {
+
+        function g(k) {
+            this.x = 100 + k;
+            // 无论嵌套多少层，都是指定全局变量
+        }
+        g(2);
         this.x = 8 + i;
     }
     h(3);
-    console.log(x);
+    console.log("1:" + x);
 
     // var test = new h(5);
     // console.log(x);
     　
     function test() {　　　　
-        alert(this.x);　　
+        console.log(this.x);　　
     }　　
     var o = {};　　
     o.x = 1;　　

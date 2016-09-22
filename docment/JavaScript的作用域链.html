@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document
+    </title>
+</head>
+
+<body>
+    <script type="text/javascript">
+    var rain = 1;
+
+    function rainman() {
+        var man = 2;
+        var rain = 5;
+        // 参数作用域在其子方法范围内都有作用，如果子方法也有定义同名变量，子方法会取最近的那层参数值
+        // 由里面向外面找（不包含当前作用域方法里面的作用域变量）
+        function inner() {
+            var innerVar = 4;
+            console.log(rain);
+        }
+        inner(); //调用inner函数
+    }
+    rainman(); //调用rainman函数
+    </script>
+</body>
+
+</html>

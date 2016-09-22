@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document
+    </title>
+</head>
+
+<body>
+    <script type="text/javascript">
+    var x = 1;
+
+    function rain() {
+        alert(x); //弹出 'undefined'，而不是1
+        var x = 'rain-man';
+        alert(x); //弹出 'rain-man'
+    }
+    rain();
+    </script>
+</body>
+
+</html>

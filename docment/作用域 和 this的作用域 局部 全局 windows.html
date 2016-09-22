@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document
+    </title>
+</head>
+
+<body>
+    <script type="text/javascript">
+    myFunction();
+    // js里面方法声明和调用没有顺序之分
+    function myFunction() {
+        carName = "Volvo";
+        // 方法里面不加var定义的变量是全局变量，默认在全局中注册（carName；不能这样注册）
+        // var carName = "Volvo";
+        console.log(carName);
+        // 局部作用域
+
+    }
+    for (var i = 0; i < 4; i++) {
+        console.log(i);
+        var k = 9;
+    }
+    // console.log('carName:' + carName);
+    console.log('carName:' + window.carName);
+    // 所有全局属性都是window的属性
+    // js一旦抛出一场就不会执行下去，如果不捕获异常的话
+    console.log(i);
+    console.log(k);
+    // for里面定义的变量是全局的
+    if (k < 10) {
+        var g = 88;
+        console.log(g);
+    }
+    console.log(g);
+    // if语句里面的变量定义也是全局的
+    // 没有块级作用域
+    </script>
+</body>
+
+</html>

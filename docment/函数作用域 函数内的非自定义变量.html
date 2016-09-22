@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document
+    </title>
+</head>
+
+<body>
+    <script type="text/javascript">
+    var x = 55;
+
+    function rain() {
+        x = 1;
+
+        function man() {
+            var x = 100;
+
+            function woman() {
+                x = 33;
+                // 全局变量在里面，会从里面一直改到最外层，而不是仅仅改变最外层
+                // 指全局变量，小心执行顺序
+            }
+            woman();
+            console.log("3:" + x);
+        }
+        man(); //调用man
+        console.log("2:" + x); //100
+    }
+    rain(); //调用rain
+    console.log('1:' + x);
+    </script>
+</body>
+
+</html>

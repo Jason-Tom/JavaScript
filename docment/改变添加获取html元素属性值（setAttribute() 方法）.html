@@ -5,7 +5,8 @@
     <input value="OK">
     <p id="demo">点击按钮来设置按钮的 type 属性。</p>
     <button onclick="myFunction()">试一下</button>
-    <img src="1.jpg" alt="gagaga">
+    <!-- <img height="200px" src="1.jpg" alt="gagaga" name="kkk" style="width: 400px;"> -->
+    <img src="1.jpg" alt="gagaga" name="kkk" style="width: 400px;">
     <button onclick="myimg()">myimg试一下</button>
     <script>
     function myFunction() {
@@ -20,7 +21,8 @@
     // 多个属性值，批量添加和设定
     function myimg() {
         document.getElementsByTagName('img')[0].setAttribute('src', '2.jpeg');
-        console.log(document.getElementsByTagName('img')[0].getAttribute("src"));
+        console.log(document.getElementsByTagName('img')[0].getAttribute("height"));
+        // 没有设定的属性默认为空，不会自动捕获
     }
     </script>
     <p>Internet Explorer 8 以及更早的版本不支持此方法。</p>
