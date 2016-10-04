@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 
 <head>
@@ -16,18 +16,16 @@
 <body>
     <p>该实例演示了在添加事件监听时冒泡与捕获阶段的不同。</p>
     <div id="myDiv">
-        <div id="myP">点击该段落， 我是冒泡</div>
+        <p id="myP">点击该段落， 我是冒泡</p>
     </div>
     <br>
     <div id="myDiv2">
-        <div id="myP2">点击该段落， 我是捕获</div>
+        <p id="myP2">点击该段落， 我是捕获</p>
     </div>
     <script>
     document.getElementById("myP").addEventListener("click", function() {
         alert("你点击了 P 元素!");
     }, false);
-    // 设定三个参数，第一个是事件，第二个是方法，第三个true或false是设定是冒泡或者捕获
-    // 当元素叠加在一起的时候会出现冒泡或者捕获现象（默认是冒泡，也就是由上到下，捕获是由下到上）
     document.getElementById("myDiv").addEventListener("click", function() {
         alert("你点击了 DIV 元素!");
     }, false);

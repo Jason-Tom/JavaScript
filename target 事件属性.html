@@ -1,0 +1,24 @@
+﻿<html>
+
+<head>
+    <script type="text/javascript">
+    function getEventTrigger(event) {
+        x = event.target;
+        // 这是一个对象
+        // target 事件属性可返回事件的目标节点（触发该事件的节点），如生成事件的元素、文档或窗口。
+        console.log("The id of the triggered element: " + x.id);
+        console.log("The id of the triggered name: " + x.tagName);
+        console.log("The id of the triggered name: " + x.className);
+        console.log("The id of the triggered name: " + x.kakaka);
+        // 能获取该元素的属性值（注意对应相应参数）(自定义的貌似不行？（是否要加上设定属性）)
+    }
+    </script>
+</head>
+
+<body>
+    <p id="p1" onmousedown="getEventTrigger(event)" class="gagaga" kakaka="kakaka">
+        <!-- event是窗口属性（全局的） -->
+        Click on this paragraph. An alert box will show which element triggered the event.</p>
+</body>
+
+</html>

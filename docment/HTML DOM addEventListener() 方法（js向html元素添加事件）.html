@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>菜鸟教程(runoob.com)</title>
+</head>
+
+<body>
+    <p>该实例使用 addEventListener() 方法来向按钮添加点击事件。</p>
+    <button id="myBtn">点我</button>
+    <script>
+    document.getElementById("myBtn").addEventListener("click", function() {
+        console.log("gogo!");
+        la('go!');
+        ga();
+        // 同一个事件添加多个方法，直接在空方法里面添加比较方便
+        // 通过空方法tina语句、方法
+    });
+
+    document.getElementsByTagName('button')[0]. addEventListener("mouseover", function() {
+        xi()
+    });
+
+    function la(xi) {
+        console.log("la：" + xi);
+    }
+
+    function ga() {
+        console.log("ga");
+    }
+
+    function xi() {
+        console.log("gogogo!");
+    }
+    </script>
+</body>
+
+</html>
